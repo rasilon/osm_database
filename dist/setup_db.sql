@@ -1,0 +1,7 @@
+CREATE DATABASE gis;
+\c gis
+
+CREATE EXTENSION hstore;
+CREATE EXTENSION postgis;
+
+CREATE ROLE gis_app LOGIN PASSWORD 'gis_app';

@@ -1,6 +1,6 @@
-FROM postgres:11 as deploy
+FROM postgres:15 as deploy
 
-RUN apt-get update && apt-get upgrade --yes && apt-get --yes install osm2pgsql postgresql-11-postgis-2.5 wget
+RUN apt-get update && apt-get upgrade --yes && apt-get --yes install osm2pgsql wget postgresql-15-postgis-3
 
 
 COPY dist/setup_db.sql /docker-entrypoint-initdb.d/01_setup.sql
